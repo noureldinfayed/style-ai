@@ -293,7 +293,7 @@ export default function Page() {
           </div>
 
           {/* ── Occasion pills ── */}
-          <div className="no-scrollbar" style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4, paddingRight: 20 }}>
+          <div className="no-scrollbar" style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
             {tr.occasions.map((occ, i) => (
               <button
                 key={i}
@@ -310,6 +310,8 @@ export default function Page() {
                 {occ}
               </button>
             ))}
+            {/* Spacer — padding-right on scroll containers is ignored by browsers */}
+            <div style={{ flexShrink: 0, width: 20 }} aria-hidden />
           </div>
 
           {/* ── CTA button ── */}
