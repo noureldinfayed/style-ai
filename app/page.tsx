@@ -293,13 +293,13 @@ export default function Page() {
           </div>
 
           {/* ── Occasion pills ── */}
-          <div className="no-scrollbar" style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
             {tr.occasions.map((occ, i) => (
               <button
                 key={i}
                 onClick={() => setOccasionIdx(i)}
                 style={{
-                  flexShrink: 0, padding: '8px 16px', borderRadius: 999,
+                  padding: '8px 16px', borderRadius: 999,
                   border: `1.5px solid ${occasionIdx === i ? '#C9A84C' : 'rgba(255,255,255,0.2)'}`,
                   ...glass(occasionIdx === i ? 0.5 : 0.18, 8),
                   color: occasionIdx === i ? '#C9A84C' : 'rgba(255,255,255,0.75)',
@@ -310,8 +310,6 @@ export default function Page() {
                 {occ}
               </button>
             ))}
-            {/* Spacer — padding-right on scroll containers is ignored by browsers */}
-            <div style={{ flexShrink: 0, width: 20 }} aria-hidden />
           </div>
 
           {/* ── CTA button ── */}
