@@ -293,7 +293,7 @@ export default function Page() {
           </div>
 
           {/* ── Occasion pills ── */}
-          <div className="no-scrollbar" style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
+          <div className="no-scrollbar" style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4, paddingRight: 20 }}>
             {tr.occasions.map((occ, i) => (
               <button
                 key={i}
